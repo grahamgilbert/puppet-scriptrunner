@@ -1,6 +1,6 @@
 define scriptrunner::once(
     $script,
-    $priority = $scriptrunner::priority,
+    $priority = '10',
     $ensure = 'present'
 ){
     require scriptrunner::setup

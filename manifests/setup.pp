@@ -1,5 +1,4 @@
 class scriptrunner::setup{
-    include scriptrunner
     if ! defined(File['/Library/Management/scriptRunner']) {
       file { '/Library/Management/scriptRunner':
         ensure => directory,
