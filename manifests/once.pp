@@ -9,7 +9,7 @@ define scriptrunner::once(
         fail('Invalid value for ensure')
     }
     
-    if $ensure = 'present'{
+    if $ensure == 'present'{
         file {"/Library/Management/scriptRunner/once/${priority}-${title}":
             source => $script,
             owner  => 0,
@@ -18,7 +18,7 @@ define scriptrunner::once(
         }
     }
 
-    if $ensure = 'absent' {
+    if $ensure == 'absent' {
         file {"/Library/Management/scriptRunner/once/${priority}-${title}":
             ensure => absent,
         }

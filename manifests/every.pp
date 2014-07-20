@@ -9,7 +9,7 @@ define scriptrunner::every(
         fail('Invalid value for ensure')
     }
 
-    if $ensure = 'present'{
+    if $ensure == 'present'{
         file {"/Library/Management/scriptRunner/every/${priority}-${title}":
             source => $script,
             owner  => 0,
@@ -18,7 +18,7 @@ define scriptrunner::every(
         }
     }
 
-    if $ensure = 'absent' {
+    if $ensure == 'absent' {
         file {"/Library/Management/scriptRunner/every/${priority}-${title}":
             ensure => absent,
         }
